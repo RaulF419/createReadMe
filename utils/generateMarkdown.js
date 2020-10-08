@@ -29,7 +29,6 @@ This project is licensed under the ${license} license.`
 function generateMarkdown(data) {
   return `# ${data.title}
   ${renderLicenseBadge(data.license)}
-  
 
   ## Description
   ${data.description}
@@ -39,7 +38,9 @@ function generateMarkdown(data) {
   * [Installation](#installation)
 
   * [Usage](#usage)
-    ${renderLicenseLink(data.license)}
+    
+  ${renderLicenseLink(data.license)}
+  
   * [Contributing](#contributing)
 
   * [Test](#test)
@@ -48,11 +49,8 @@ function generateMarkdown(data) {
 
   ## Installation
 
-  To install necessary dependecies, run the following command:
-
-  \`\`\`
-  ${data.installation}
-  \`\`\`
+  To install necessary dependecies, run the following command: ${data.installation}
+  
 
   ## Usage
   ${data.usage}
@@ -64,16 +62,13 @@ function generateMarkdown(data) {
 
   ## Test
 
-  To run tests, run the following command:
-
-  \`\`\`
-  ${data.test}
-  \`\`\`
+  To run tests, run the following command: ${data.test}
+ 
 
   ## Questions
 
   If you have any questions about the repo, open an issue or 
-  contact me directly at ${data.email}. You can find more of my work at
+  contact me directly at ${data.email}. You can find more of my work at https://github.com/${data.github}
 
 `;
 }
